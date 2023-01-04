@@ -1,0 +1,573 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', 'calya', sans-serif;
+    color: black;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 10vh;
+    padding-bottom: 20vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+#main-container {
+
+    width: 100%;
+    height: 100vh;
+
+    padding-bottom: 10vh;
+}
+
+#navbar-area {
+    background: white;
+
+    height: 10vh;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    padding: 0 30px;
+    padding-left: 60px;
+
+    font-size: 15px;
+}
+
+#brisa-logo {
+    width: 100px;
+}
+
+#navbar-left ul,
+#navbar-right ul {
+
+    display: flex;
+
+    list-style-type: none;
+}
+
+#navbar-left ul li,
+#navbar-right ul li {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#navbar-left ul li a:hover,
+#navbar-right ul li a:hover {
+    color: #5269cf;
+}
+
+#navbar-right ul li img {
+    width: 20px;
+}
+
+#hero-area {
+    height: 90vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-text-area {
+
+    width: 30%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+#hero-text-small {
+    font-size: 20px;
+}
+
+#hero-text-big {
+    font-size: 90px;
+    margin-bottom: 40px;
+}
+
+.cta {
+    background: black;
+    color: white;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+
+    transition: all;
+    transition-duration: .3s;
+}
+
+.cta:hover {
+    background: #323232;
+    transform: translateY(-10px);
+}
+
+#hero-image {
+    width: 50vw;
+    height: 80vh;
+    background-image: url(../res/images/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 300px;
+
+}
+
+#what-area {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#what-area * {
+    margin: 20px 0;
+}
+
+#what-title {
+    font-size: 50px;
+}
+
+#what-paragraph {
+    width: 40%;
+    text-align: center;
+    line-height: 30px;
+
+    font-size: 20px;
+    color: #5e5e5e;
+}
+
+#featured-area {
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#featured-title-area {
+    color: black;
+    font-size: 70px;
+}
+
+#featured-items-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90%;
+}
+
+.featured-item:nth-child(1) {
+    transform: translateY(50px);
+}
+
+.featured-item:nth-child(2) {
+    transform: translateY(-10px);
+}
+
+.featured-item:nth-child(3) {
+    transform: translateY(20px);
+}
+
+.featured-item:nth-child(4) {
+    transform: translateY(55px);
+}
+
+.featured-item {
+    width: 150px;
+    height: 400px;
+    margin: 0 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+
+    cursor: pointer;
+}
+
+.featured-item img {
+    width: 100%;
+}
+
+.featured-item-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.featured-item-img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.featured-item:nth-child(1) .featured-item-img {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/02/h1-slide2-img2.png);
+    background-size: 150px;
+}
+
+.featured-item:nth-child(2) .featured-item-img {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h4-product-14.jpg);
+    background-size: 250px;
+}
+
+.featured-item:nth-child(3) .featured-item-img {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-slide1-img.png);
+    background-size: 200px;
+}
+
+.featured-item:nth-child(4) .featured-item-img {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h3-product-2.jpg);
+    background-size: 300px;
+
+}
+
+
+#popular-area {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 300px 0;
+}
+
+#popular-title {
+    font-size: 70px;
+    text-align: center;
+}
+
+#popular-items-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.popular-item {
+    background: white;
+    margin: 10px;
+    padding: 10px;
+
+    width: 20vw;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.popular-item:hover {
+    cursor: pointer;
+}
+
+.popular-item-title {
+    font-weight: bold;
+}
+
+.popular-item-img {
+    width: 100%;
+    height: 100%;
+}
+
+.popular-item:nth-child(1) .popular-item-img {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-8.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.popular-item:nth-child(2) .popular-item-img {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-7.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.popular-item:nth-child(3) .popular-item-img {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-6.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.popular-item:nth-child(4) .popular-item-img {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-5.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.popular-item:nth-child(5) .popular-item-img {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-4.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.popular-item:nth-child(6) .popular-item-img {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-2.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.popular-item:nth-child(7) .popular-item-img {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h4-product-27.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.popular-item:nth-child(8) .popular-item-img {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-1.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+#story-area {
+    margin-top: 700px;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+#story-container {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 20px;
+}
+
+#story-img {
+    background-image: url(https://yaffa-cdn.s3.amazonaws.com/yaffadsp/images/dmImage/StandardImage/generic-i.jpg);
+    background-size: 450px;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 80%;
+
+    margin: 30px;
+}
+
+#story-details {
+    width: 40%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#story-head {
+    height: 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 10px;
+}
+
+#story-head h4 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#story-navigation {
+    display: flex;
+}
+
+#story-navigation img {
+    width: 17px;
+}
+
+#story-navigation img:nth-child(3) {
+    transform: scale(-1);
+}
+
+#story-navigation img:hover {}
+
+#story-num {
+    margin: 0 10px;
+
+    display: flex;
+    align-content: center;
+    font-weight: bolder;
+}
+
+#story-num span {
+    align-self: baseline;
+    font-size: 13px;
+    font-weight: normal;
+    color: #525252;
+}
+
+#story-message {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+#story-author {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#story-author-name {
+    font-size: 30px;
+}
+
+#story-author-occupation {
+    color: #525252;
+    font-size: 13px;
+}
+
+#instagram-area {
+    margin: 200px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 200px;
+}
+
+#instagram-title {
+    font-size: 80px;
+    text-align: center;
+    z-index: 10;
+}
+
+#instagram-title h6 {
+    font-weight: 400;
+    font-size: 50px;
+}
+
+#instagram-images {
+    width: 90%;
+    z-index: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#instagram-images .instagram-img {
+    width: 400px;
+    height: 400px;
+}
+
+#instagram-images .instagram-img:nth-child(1) {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2019/03/h4-slide1-img.png);
+    background-repeat: no-repeat;
+    background-size: 350px;
+    background-position: center;
+    background-position-x: -140px;
+    transform: translateY(-300px);
+}
+
+#instagram-images .instagram-img:nth-child(2) {
+    background-image: url(https://www.ecoshiftcorp.com/wp-content/uploads/2022/12/Pendant-Light-Black-Cage-1.jpg);
+    background-repeat: no-repeat;
+    background-size: 160px;
+    background-position: center;
+    transform: translateY(-80px);
+    width: 500px;
+}
+
+#instagram-images .instagram-img:nth-child(3) {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/02/h12-product-59.jpg);
+    background-repeat: no-repeat;
+    background-size: 450px;
+    background-position: center;
+    transform: translateY(-50px);
+
+}
+
+#instagram-images .instagram-img:nth-child(4) {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/02/h12-product-58.jpg);
+    background-repeat: no-repeat;
+    background-size: 350px;
+    background-position: center;
+    transform: translateY(-70px);
+
+}
+
+#instagram-images .instagram-img:nth-child(5) {
+    background-image: url(https://depot.qodeinteractive.com/wp-content/uploads/2017/02/h12-product-60.jpg);
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: center;
+    transform: translateY(-250px);
+
+}
+
+#footer-area {
+    display: flex;
+    justify-content: center;
+
+    padding: 20px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+
+    font-size: 14px;
+}
+
+#footer-content {
+    background: black;
+    width: 95%;
+    height: 40vh;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-around;
+
+    box-sizing: border-box;
+
+    padding: 50px;
+}
+
+.footer-part img {
+    width: 100px;
+    filter: invert(100%);
+}
+
+.footer-list li {
+    list-style-type: none;
+    margin: 15px 0;
+    color: #a9a9a9;
+    cursor: pointer;
+
+    transition-property: color;
+    transition-duration: .5s;
+}
+.footer-list li:hover {
+    color: white;
+}
